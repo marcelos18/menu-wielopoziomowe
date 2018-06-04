@@ -11,7 +11,7 @@
 	
 	<link href="style.css" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css?family=Lato&amp;subset=latin-ext" rel="stylesheet">
-	
+	<link href="css/fontello.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -40,10 +40,37 @@
 		
 			</div>
 		<div class="socials">
-			
+			<div class="socialdivs">
+				<div class="fb"><i class="icon-facebook"></i></div>
+				<div class="yt"><i class="icon-youtube"></i></div>
+				<div class="tw"><i class="icon-twitter"></i></div>
+				<div class="gplus"><i class="icon-gplus"></i></div>
+				<div style="clear:both"></div>
+			</div>
 		</div>
 		<div class="footer">strona z menu &copy; 2018</div>
 	</div>
+	
+	
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		var NavY=$('.nav').offset().top;
+		var stickyNav= function(){
+		var Scrolly=$(window).scrollTop();
+		
+		if(Scrolly> NavY ){
+			$('.nav').addClass('sticky');
+			}else {
+				$('.nav').removeClass('sticky');
+				}
+				};
+		stickyNav();
+		$(window).scroll(function(){
+			stickyNav();
+			});
+		});
+	</script>
 	
 	
 	
